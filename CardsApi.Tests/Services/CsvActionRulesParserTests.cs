@@ -60,7 +60,8 @@ ACTION3,NO,NO,YES,YES,NO,YES,NO,NO,NO,NO";
         result.Result[2].AllowedCardTypes.Count.Should().Be(1);
     }
 
-    private void MockCsvContent(string content){
+    private void MockCsvContent(string content)
+    {
         var bytes = Encoding.UTF8.GetBytes(content);
         var stream = new MemoryStream(bytes);
         var reader = new StreamReader(stream);

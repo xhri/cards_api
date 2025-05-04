@@ -8,5 +8,5 @@ public class CardActionsRequest
     public required string UserId { get; set; }
 
     [FromRoute(Name = "cardId")]
-    public required string CardId { get; set;}
+    public required string CardId { get; set; }
 }

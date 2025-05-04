@@ -57,12 +57,12 @@ public class CsvActionRulesParser(ILogger<CsvActionRulesParser> logger, IStreamR
                     NoPinSetNecessary => PinRequirement.PinNotSet,
                     _ => null
                 };
-                
+
                 if (pinRequirement != null)
                     result.AllowedCardStatuses.Add(new CardStatusRule(cardStatus, pinRequirement.Value));
             }
         }
-        
+
         return result;
     }
 }

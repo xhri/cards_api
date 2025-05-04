@@ -13,5 +13,5 @@ public class ExecutionResult<T> : ExecutionResult
     {
     }
 
-    public T? Result { get; private set;}
+    public T? Result { get; private set; }
 }

@@ -23,7 +23,7 @@ public class ExecutionResult
 
     public static ExecutionResult Failure(ErrorType errorType, string errorMessage)
         => Failure(new Error(errorType, errorMessage));
-    
+
     public static ExecutionResult<T> Success<T>(T result)
     {
         return new ExecutionResult<T>(result, true);
@@ -36,5 +36,5 @@ public class ExecutionResult
 
     public static ExecutionResult<T> Failure<T>(ErrorType errorType, string errorMessage)
         => Failure<T>(new Error(errorType, errorMessage));
-    
+
 }

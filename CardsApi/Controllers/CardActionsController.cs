@@ -21,7 +21,8 @@ public class CardActionsController(
         if (result.IsSuccess)
         {
             return Ok(mapper.Map<List<ActionResponse>>(result.Result));
-        }else
+        }
+        else
         {
             logger.LogWarning($"Error from action provider: {result.Error!.errorMessage}");
             return result.Error!.errorType switch

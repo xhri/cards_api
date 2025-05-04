@@ -14,7 +14,7 @@ public class ActionEligibilityService : IActionEligibilityService
         if (cardStatusRule == null)
             return false;
 
-        return cardStatusRule.PinRequirement switch 
+        return cardStatusRule.PinRequirement switch
         {
             PinRequirement.NoPinRequirement => true,
             PinRequirement.PinSet => cardDetails.IsPinSet,
