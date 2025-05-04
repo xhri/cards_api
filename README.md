@@ -4,11 +4,12 @@ This small cards API was prepared as part of a recruitment process.
 Of course, some corners were intentionally cut, as this is a quick demonstration project meant to showcase core skills rather than represent a fully production-ready solution.
 
 ## 🔧 Libraries used
-- xUnit + FluentAssertions + Moq (unit testing)
+- FluentValidation (request validation)
 - CsvHelper (CSV data parsing)
 - Swagger (API documentation)
 - CorrelationId (Scope correlation Id)
 - Automapper
+- xUnit + FluentAssertions + Moq (unit testing)
 
 ## 🧠 Technical Decisions
 
@@ -19,5 +20,6 @@ I generally avoid using exceptions to control application flow, as I believe it'
 ### CSV Import
 Based on exact business requirements I bet there is better way to store them, but for this small app purpose I thought this is good enough, as I have them easily readable/editable.
 
-
+### Response model
+I chose to return the action as an object in the response, as this approach aligns better with REST principles and allows for future extensibility.
 
