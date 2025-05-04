@@ -1,4 +1,5 @@
 using CardsApi.Mapper;
+using CardsApi.Model.Requests;
 using CardsApi.Providers;
 using CardsApi.Repositories;
 using CardsApi.Services;
@@ -21,6 +22,8 @@ builder.Services.AddSingleton<ICardProvider, CardProvider>();
 
 builder.Services.AddScoped<IActionsProvider, ActionsProvider>();
 builder.Services.AddScoped<IActionEligibilityService, ActionEligibilityService>();
+
+builder.Services.AddTransient<AbstractValidator<CardActionsRequest>, CardActionsRequestValidator>();
 
 builder.Services.AddValidatorsFromAssemblyContaining<CardActionsRequestValidator>();
 builder.Services.AddFluentValidationAutoValidation();
