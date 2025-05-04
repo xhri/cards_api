@@ -1,3 +1,4 @@
+using CardsApi.Mapper;
 using CardsApi.Providers;
 using CardsApi.Repositories;
 using CardsApi.Services;
@@ -36,6 +37,8 @@ builder.Services.AddDefaultCorrelationId(options =>
     options.RequestHeader = "correlation-id";
     options.ResponseHeader = "correlation-id";
 });
+
+builder.Services.AddAutoMapper(typeof(ApiMapperProfile));
 
 var app = builder.Build();
 
